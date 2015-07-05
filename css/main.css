@@ -2,6 +2,10 @@
 GENERAL
 ********************************/
 
+html{
+	background-image: url("img/fashion/background.jpg");
+}
+
 body{
 	font-family: 'Raleway', sans-serif;
 }
@@ -14,6 +18,8 @@ body{
 footer{
 	text-align: center;
 }
+
+
 
 
 /********************************

@@ -5,7 +5,24 @@
 <title> Jieni's Portfolio | Contact </title>
 <link rel="stylesheet" href="css/main.css"> 
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-<script src="javascript/main.js"></script>
+<script>
+    function checkforblank(){
+        if (document.getElementById('name').value ==""){
+            alert("Please enter your name.");
+            document.getElementById('name').style.borderColor = "red";
+            return false;
+        }
+        else if(document.getElementById('subject').value == ""){
+            alert("Please enter a subject.");
+            document.getElementById('subject').style.borderColor = "red";
+            return false;
+        }
+        else{
+            alert("Message is now sent!");
+            return true;
+        }
+    }
+</script>
 </head>
 <body>
 	<header> 
@@ -13,7 +30,7 @@
 			<ul>
 				<li> <a href="index.html">Home </a></li>
 				<li> <a href="projects.html"> Projects </a></li>
-                <li> <a href="blog.html"> Fashion </a></li> 
+                <li> <a href="blog.html"> Fashion Blog</a></li> 
 				<li> <a href="contact.html">Contact </a></li>
 				<li> <a href="gallery.html">Gallery </a></li> 
 			</ul>
@@ -31,12 +48,14 @@
     	<p> If you would like to contact me directly, you can send me an email at <a href="mailto:jhou25@uwo.ca"> jhou25@uwo.ca </a> or fill in the form below! </p>
         
         <!---remember to add javascript to remind the user that the message is sent -->
-    	<form>
-    		<label> Name: </label><input type="text" name="name"><br>
-    		<label> Subject: </label><input type="text" name="subject"><br>
+    	<form method="post" action="#" onsubmit="return checkforblank()">
+            <fieldset>
+    		<label> Name: <input type="text" id="name" name="name"></label><br>
+    		<label> Subject: <input type="text" id="subject" name="subject"></label><br>
     		<textarea name="message" cols="40" rows="10"> </textarea><br><br>
     		<button type="submit" name="submit"> Submit </button>
     		<button> Reset </button>
+            </fieldset>
         </form>
     </div>
     <footer>
