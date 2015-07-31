@@ -2,25 +2,35 @@
 GENERAL
 ********************************/
 
-html{
-	background-image: url("img/fashion/background.jpg");
-}
-
 body{
 	font-family: 'Raleway', sans-serif;
+	background: linear-gradient( 160deg, #ffffff 30%, #7f7f7f 60%);
+	background-image: url("../img/background.JPG");
+	background-size: cover;
+	background-repeat:repeat-y;
 }
 
 #main{
 	width: 600px;
-	margin: 0 auto;
+	margin: 55px auto;
+	padding: 20px;
+
+}
+
+header{
+	background-color: #ffffff;
+	text-align: center;
+	width: 95%;
+	opacity:0.8;
+	margin-left: 20px;
 }
 
 footer{
 	text-align: center;
+	background-color: #ffffff;
+	max-width:100%;
+	opacity:0.8;
 }
-
-
-
 
 /********************************
 NAVIGATION 
@@ -43,23 +53,32 @@ nav li{
 nav a{
 	text-decoration: none;
 	padding: 15px 10px;
-}
-
-/*******************************
-Page: HOME
-*******************************/
-#main > h1{
-	text-align: center;
+	color: #000000;
+	font-size: 20px;
 	font-weight: bold;
 }
 
-.Bio{
-   background-color: black;
-   color: #FFFFFF;
-   font-size: 20px;
-   font-weight: normal;
-   text-align: left;
-   text-indent: 60px;
+nav a:hover{
+	color: red;
+	background: radial-gradient(circle at bottom, black 20%, Gainsboro 10%);
+	box-shadow:10px 10px 5px #000000 ;
+}
+
+nav a:active{
+	color:purple;
+	background: radial-gradient(circle at bottom, black 20%, Gainsboro 10%);
+	box-shadow:10px 10px 5px #000000 ;
+}
+/*******************************
+Page: HOME
+*******************************/
+#main{
+	text-align: center;
+	background-color: black;
+	color:#FFFFFF;
+	box-shadow: 10px 10px 5px #ffffff;
+	border-radius:15px 50px;
+	font-size: 10px;
 }
 
 /*******************************
@@ -68,34 +87,39 @@ Page: PROJECTS
 
 .Teddy > h2 {
 	text-align: left;
+	font-size: 18px;
 }
 
 .Teddy > p{
 	text-decoration: none;
 	text-align: right;
 	margin-left: 300px;
+	font-size: 15px;
 }
 
 .popcorn > h2{
 	text-align: right;
+	font-size: 18px;
 }
 
 .popcorn > p{
 	text-decoration: none;
 	text-align: left;
 	margin-right: 300px;
+	font-size: 15px;
 }
 
 .treasury > h2{
 	text-align: left;
+	font-size: 18px;
 }
 
 .treasury > p{
 	text-decoration: none;
 	text-align: right;
 	margin-left: 300px;
+	font-size: 15px;
 }
-
 
 /*******************************
 Page: CONTACT
@@ -103,16 +127,18 @@ Page: CONTACT
 
 .social{
 	text-align: center;
+	font-size: 13px;
 }
 
 form{
 	text-align: center;
+	font-size: 13px;
 }
 
 #main > p{
 	text-align: center;
-}
-
+	font-size: 13px;
+} 
 
 /*******************************
 Page: BLOG
@@ -120,5 +146,40 @@ Page: BLOG
 
 .blog{
 	text-align: center;
+	font-size: 13px;
+}
+
+/*******************************
+Page: Gallery
+*******************************/
+
+.imageStyle{
+	height:100px;
+	width:100px;
+	border:3px solid black;
+}
+
+#mainImage{
+   height:550px;
+   width:600px;
+   border:3px solid black;
+}
+
+/******************************
+Responsive Website
+*******************************/
+
+@media(max-width: 700px){
+	#main{
+        width: 80%;
+	}
+	#mainImage{
+        width: 80%;
+        height: 80%;
+	}
+	.imageStyle{
+		width:80%;
+		height:80%;
+	}
 }
 

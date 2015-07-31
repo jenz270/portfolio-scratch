@@ -5,24 +5,6 @@
 <title> Jieni's Portfolio | Contact </title>
 <link rel="stylesheet" href="css/main.css"> 
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
-<script>
-    function checkforblank(){
-        if (document.getElementById('name').value ==""){
-            alert("Please enter your name.");
-            document.getElementById('name').style.borderColor = "red";
-            return false;
-        }
-        else if(document.getElementById('subject').value == ""){
-            alert("Please enter a subject.");
-            document.getElementById('subject').style.borderColor = "red";
-            return false;
-        }
-        else{
-            alert("Message is now sent!");
-            return true;
-        }
-    }
-</script>
 </head>
 <body>
 	<header> 
@@ -37,6 +19,7 @@
 	    </nav>
     </header>
     <div id="main">
+        <h1> Contact </h1>
         <section class="social">
             <p> Lets connect! Follow me on my social media! </p>
             <a href="http://twitter.com/jenzhouu"><img src="img/twitter.png" alt="twittericon" width="50" height="50"></a>
@@ -52,15 +35,21 @@
             <fieldset>
     		<label> Name: <input type="text" id="name" name="name"></label><br>
     		<label> Subject: <input type="text" id="subject" name="subject"></label><br>
-    		<textarea name="message" cols="40" rows="10"> </textarea><br><br>
+            <p> Message: </p><br>
+            <textarea name="message" cols="40" rows="10"> </textarea><br><br>
     		<button type="submit" name="submit"> Submit </button>
     		<button> Reset </button>
             </fieldset>
         </form>
     </div>
+     <hr>
     <footer>
 		<p> &copy; 2015 Jieni Hou.</p>
     </footer>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
 
 </body>
 </html>
